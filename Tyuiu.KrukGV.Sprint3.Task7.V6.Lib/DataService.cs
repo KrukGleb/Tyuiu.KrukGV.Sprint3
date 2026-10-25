@@ -18,7 +18,7 @@ namespace Tyuiu.KrukGV.Sprint3.Task7.V6.Lib
                     - 5*x 
                     - 2;
 
-                res[i] = Math.Round(res[i], 3);
+                res[i] = Math.Round(res[i], 2);
                 
                 
             }
