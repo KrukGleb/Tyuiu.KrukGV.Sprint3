@@ -14,32 +14,29 @@ namespace Tyuiu.KrukGV.Sprint3.Task1.V18
             Console.WriteLine("* Спринт #3                                                               *");
             Console.WriteLine("* Тема: Базовые навыки работы в С#                                        *");
             Console.WriteLine("* Задание #1                                                              *");
-            Console.WriteLine("* Вариант #18                                                              *");
+            Console.WriteLine("* Вариант #18                                                             *");
             Console.WriteLine("* Выполнил: Крук Глеб Владиславович | НТм25-1                             *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу из операций сравнений (==, !=, <, >, <=, >=,         *");
-            Console.WriteLine("* последовательность операций не должна нарушаться) и арифметических      *");
+            Console.WriteLine("* Написать программу используя цикл while, которая вычисляет сумму ряда   *");
+            Console.WriteLine("* по формуле sum (sin(i)/4)^2, i=1 to 15                                  *");
             Console.WriteLine("* выражений, которая вернет логическую последовательность                 *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
 
-            var x = 1065;
-            var y = 755;
-            Console.WriteLine("x = " + x);
-            Console.WriteLine("y = " + y);
+            var i1 = 1;
+            var i_n = 15;
+            Console.WriteLine("i1 = " + i1);
+            Console.WriteLine("in = " + i_n);
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            bool[] res = ds.GetCompareOperations(x, y);
-            foreach (var op in res) 
-            {
-                Console.WriteLine(op);
-            }
+            double res = ds.GetSumSeries(i1, i_n);
+            Console.WriteLine(res);
             Console.ReadKey();
         }
     }
