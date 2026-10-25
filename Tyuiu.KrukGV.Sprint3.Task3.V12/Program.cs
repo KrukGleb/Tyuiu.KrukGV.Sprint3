@@ -14,32 +14,29 @@ namespace Tyuiu.KrukGV.Sprint3.Task3.V12
             Console.WriteLine("* Спринт #3                                                               *");
             Console.WriteLine("* Тема: Базовые навыки работы в С#                                        *");
             Console.WriteLine("* Задание #3                                                              *");
-            Console.WriteLine("* Вариант #12                                                              *");
+            Console.WriteLine("* Вариант #12                                                             *");
             Console.WriteLine("* Выполнил: Крук Глеб Владиславович | НТм25-1                             *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу из операций сравнений (==, !=, <, >, <=, >=,         *");
-            Console.WriteLine("* последовательность операций не должна нарушаться) и арифметических      *");
+            Console.WriteLine("* Используя цикл foreach подсчитать максимальное количество букв k,       *");
+            Console.WriteLine("* находящихся на соседних позициях в строке: bkkrk ckkkcs ksr             *");
             Console.WriteLine("* выражений, которая вернет логическую последовательность                 *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
 
-            var x = 1065;
-            var y = 755;
-            Console.WriteLine("x = " + x);
-            Console.WriteLine("y = " + y);
+            var str = "bkkrk ckkkcs ksr";
+            var c = 'k';
+            Console.WriteLine("str = " + str);
+            Console.WriteLine("char = " + c);
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            bool[] res = ds.GetCompareOperations(x, y);
-            foreach (var op in res) 
-            {
-                Console.WriteLine(op);
-            }
+            int res = ds.GetMaxCharCount(str, c);
+            Console.WriteLine(res);
             Console.ReadKey();
         }
     }

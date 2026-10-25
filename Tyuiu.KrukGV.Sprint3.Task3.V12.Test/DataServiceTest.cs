@@ -10,10 +10,10 @@ namespace Tyuiu.KrukGV.Sprint3.Task3.V12.Test
         public void ValidExpression()
         {
             DataService ds = new DataService();
-            bool[] res = ds.GetCompareOperations(1065, 755);
-            bool[] ans = { true, false, false, false, false, false };
+            int res = ds.GetMaxCharCount("bkkrk ckkkcs ksr", 'k');
+            
 
-            CollectionAssert.AreEqual(ans, res);
+            Assert.AreEqual(3, res);
         }
     }
 }
