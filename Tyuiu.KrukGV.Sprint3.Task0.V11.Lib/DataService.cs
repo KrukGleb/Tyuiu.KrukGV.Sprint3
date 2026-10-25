@@ -13,7 +13,7 @@ namespace Tyuiu.KrukGV.Sprint3.Task0.V11.Lib
                 sum += Math.Pow(temp, 2);
 
             }
-            return sum;
+            return Math.Round(sum, 3);
         }
     }
 }
