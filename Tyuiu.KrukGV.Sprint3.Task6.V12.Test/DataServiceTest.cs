@@ -10,10 +10,10 @@ namespace Tyuiu.KrukGV.Sprint3.Task6.V12.Test
         public void ValidExpression()
         {
             DataService ds = new DataService();
-            bool[] res = ds.GetCompareOperations(1065, 755);
-            bool[] ans = { true, false, false, false, false, false };
+            var res = ds.GetSumTheDivisors(9, 18);
 
-            CollectionAssert.AreEqual(ans, res);
+
+            Assert.AreEqual(221, res);
         }
     }
 }
