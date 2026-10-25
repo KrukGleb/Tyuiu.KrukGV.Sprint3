@@ -10,8 +10,9 @@ namespace Tyuiu.KrukGV.Sprint3.Task1.V18.Lib
             double sum = 0;
             while (i <= stopValue) 
             {
-                var temp = Math.Sin(i) / 4;
-                sum += Math.Pow(temp, 2);
+                var temp = Math.Sin(i) / 16;
+                //sum += Math.Pow(temp, 2);
+                sum += temp;
                 i++;
             }
             return Math.Round(sum, 3);

@@ -13,7 +13,7 @@ namespace Tyuiu.KrukGV.Sprint3.Task1.V18.Test
             double res = ds.GetSumSeries(1, 15);
             
 
-            Assert.AreEqual(0.492, res);
+            Assert.AreEqual(0.121, res);
         }
     }
 }
