@@ -10,8 +10,8 @@ namespace Tyuiu.KrukGV.Sprint3.Task7.V6.Test
         public void ValidExpression()
         {
             DataService ds = new DataService();
-            bool[] res = ds.GetCompareOperations(1065, 755);
-            bool[] ans = { true, false, false, false, false, false };
+            double[] res = ds.GetMassFunction(-5, 5);
+            double[] ans = { 23.917, 18.876,  13.096,  7.238,   1.798,   -8.000,  -5.695,  -11.257, -17.117, -22.883, -27.915};
 
             CollectionAssert.AreEqual(ans, res);
         }

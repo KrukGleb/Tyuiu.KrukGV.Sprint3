@@ -1,19 +1,29 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint2;
+﻿using tyuiu.cources.programming.interfaces.Sprint3;
 
 namespace Tyuiu.KrukGV.Sprint3.Task7.V6.Lib
 {
-    public class DataService : ISprint2Task0V17
+    public class DataService : ISprint3Task7V6
     {
-        public bool[] GetCompareOperations(int x, int y)
+        public double[] GetMassFunction(int startValue, int stopValue)
         {
-            bool[] res = new bool[6];
-            res[0] = x - 310 == y;
-            res[1] = x - 310 != y;
-            res[2] = x < y;
-            res[3] = y > x;
-            res[4] = x <= y;
-            res[5] = y >= x;
+            var len = Math.Abs(stopValue - startValue) + 1;
+            double[] res = new double[len];
+            int x = 0;
+            for (int i = 0; i < len; i++)
+            {
+                x = i + startValue;
+                Console.WriteLine(x);
+                res[i] = 3 * Math.Cos(x) / (4 * x - 0.5) 
+                    + Math.Sin(x) 
+                    - 5*x 
+                    - 2;
+
+                res[i] = Math.Round(res[i], 3);
+                
+                
+            }
             return res;
+            
         }
     }
 }

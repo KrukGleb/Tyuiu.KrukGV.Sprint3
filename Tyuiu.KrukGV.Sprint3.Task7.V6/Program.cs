@@ -26,20 +26,25 @@ namespace Tyuiu.KrukGV.Sprint3.Task7.V6
             Console.WriteLine("***************************************************************************");
 
 
-            var x = 1065;
-            var y = 755;
-            Console.WriteLine("x = " + x);
-            Console.WriteLine("y = " + y);
+            var startValue = -5;
+            var stopValue = 5;
+            double[] valueArray = ds.GetMassFunction(startValue, stopValue);
+            int len = valueArray.Length;
 
-            Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
-            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("startValue = " + startValue);
+            Console.WriteLine("stopValue = " + stopValue);
 
-            bool[] res = ds.GetCompareOperations(x, y);
-            foreach (var op in res) 
+            Console.WriteLine("+-------------------------------+");
+            Console.WriteLine("|\tX\t|\tf(x)\t|");
+            Console.WriteLine("+-------------------------------+");
+
+            for (int i = 0; i < len; i++)
             {
-                Console.WriteLine(op);
+                Console.WriteLine("|{0,8:d}\t|\t{1, 5:f2}\t|", startValue, valueArray[i]);
+                startValue++;
             }
+
+            Console.WriteLine("+-------------------------------+");
             Console.ReadKey();
         }
     }
