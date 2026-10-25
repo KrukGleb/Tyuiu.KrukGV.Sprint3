@@ -14,32 +14,30 @@ namespace Tyuiu.KrukGV.Sprint3.Task2.V18
             Console.WriteLine("* Спринт #3                                                               *");
             Console.WriteLine("* Тема: Базовые навыки работы в С#                                        *");
             Console.WriteLine("* Задание #2                                                              *");
-            Console.WriteLine("* Вариант #18                                                              *");
+            Console.WriteLine("* Вариант #18                                                             *");
             Console.WriteLine("* Выполнил: Крук Глеб Владиславович | НТм25-1                             *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу из операций сравнений (==, !=, <, >, <=, >=,         *");
-            Console.WriteLine("* последовательность операций не должна нарушаться) и арифметических      *");
-            Console.WriteLine("* выражений, которая вернет логическую последовательность                 *");
+            Console.WriteLine("* Написать программу используя цикл do...while, которая вычисляет         *");
+            Console.WriteLine("* произведение ряда по формуле, при х=1                                   *");
+            Console.WriteLine("* prod (cos(1) + (k/8)^3), k=1 to 14                                      *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-
-            var x = 1065;
-            var y = 755;
+            var x = 1;
+            var k1 = 1;
+            var kn = 14;
             Console.WriteLine("x = " + x);
-            Console.WriteLine("y = " + y);
+            Console.WriteLine("k1 = " + k1);
+            Console.WriteLine("kn = " + kn);
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            bool[] res = ds.GetCompareOperations(x, y);
-            foreach (var op in res) 
-            {
-                Console.WriteLine(op);
-            }
+            double res = ds.GetMultiplySeries(x, k1, kn);
+            Console.WriteLine(res);
             Console.ReadKey();
         }
     }

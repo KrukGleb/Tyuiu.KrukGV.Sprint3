@@ -1,19 +1,27 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint2;
+﻿using tyuiu.cources.programming.interfaces.Sprint3;
 
 namespace Tyuiu.KrukGV.Sprint3.Task2.V18.Lib
 {
-    public class DataService : ISprint2Task0V17
+    public class DataService : ISprint3Task2V18
     {
-        public bool[] GetCompareOperations(int x, int y)
+        
+
+        public double GetMultiplySeries(int value, int startValue, int stopValue)
         {
-            bool[] res = new bool[6];
-            res[0] = x - 310 == y;
-            res[1] = x - 310 != y;
-            res[2] = x < y;
-            res[3] = y > x;
-            res[4] = x <= y;
-            res[5] = y >= x;
-            return res;
+            var k = startValue;
+            double mult = 1;
+            var cosx = Math.Cos(value);
+            do
+            {
+                
+                var temp = Math.Pow( (double) k/8, 3);
+
+                mult *= (cosx + temp);
+                k++;
+
+            } while (k <= stopValue);
+               
+            return Math.Round(mult, 3);
         }
     }
 }
