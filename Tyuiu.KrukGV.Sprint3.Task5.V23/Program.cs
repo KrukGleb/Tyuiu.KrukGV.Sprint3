@@ -25,21 +25,22 @@ namespace Tyuiu.KrukGV.Sprint3.Task5.V23
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-
-            var x = 1065;
-            var y = 755;
-            Console.WriteLine("x = " + x);
-            Console.WriteLine("y = " + y);
+            var x = 2;
+            var i1 = 1;
+            var i_n = 3;
+            var k1 = 1;
+            var k_n = 10;
+            Console.WriteLine("x = "+ x);
+            Console.WriteLine("i принадлежит промежутку [" + i1 + ", " +i_n +"]");
+            Console.WriteLine("k принадлежит промежутку [" + k1 + ", " + k_n + "]");
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            bool[] res = ds.GetCompareOperations(x, y);
-            foreach (var op in res) 
-            {
-                Console.WriteLine(op);
-            }
+            double res = ds.GetSumSumSeries(x, i1, k1, i_n, k_n);
+            Console.WriteLine(res);
+
             Console.ReadKey();
         }
     }

@@ -1,19 +1,28 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint2;
+﻿using tyuiu.cources.programming.interfaces.Sprint3;
 
 namespace Tyuiu.KrukGV.Sprint3.Task5.V23.Lib
 {
-    public class DataService : ISprint2Task0V17
+    public class DataService : ISprint3Task5V23
     {
-        public bool[] GetCompareOperations(int x, int y)
+        
+        public double GetSumSumSeries(int x, int startValue1, int startValue2, int stopValue1, int stopValue2)
         {
-            bool[] res = new bool[6];
-            res[0] = x - 310 == y;
-            res[1] = x - 310 != y;
-            res[2] = x < y;
-            res[3] = y > x;
-            res[4] = x <= y;
-            res[5] = y >= x;
-            return res;
+            //double temp = 0;
+            double sum = 0;
+            for(int i = startValue1; i <= stopValue1; i++)
+            {
+                for(int k = startValue2; k <= stopValue2; k++)
+                {
+                    sum += (Math.Pow(x, k) + 2) * Math.Cos(k);
+                    //sum += temp;
+                }
+                break;
+
+            }
+            
+            sum *= 3;
+            return Math.Round(sum, 3);
+            throw new NotImplementedException();
         }
     }
 }
